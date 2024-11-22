@@ -1,0 +1,37 @@
+
+
+.card {
+    width: 35vw;
+    padding: 80px;
+    border-radius: 20px;
+    border: 2px solid #D6D9DC;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 20px; 
+    margin: 0 auto;
+}
+
+.form-group {
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 14px;
+    appearance: none;
+}
+
+label {
+    width: 200px;
+    height: 24px;
+}
+
+
