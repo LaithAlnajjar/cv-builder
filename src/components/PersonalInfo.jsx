@@ -20,7 +20,7 @@ export default function PersonalInfo(props) {
     });
 
     return (
-        <div className='card'>
+        
             <form action="" className="personal-info">
             <div className="form-group">
                 <label htmlFor="name"> Name </label>
@@ -63,6 +63,5 @@ export default function PersonalInfo(props) {
             </div>
                 
             </form>
-        </div>
     )
 }
