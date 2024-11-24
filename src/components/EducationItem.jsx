@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function EducationItem() {
+export default function EducationItem(props) {
     const [education, setEducation] = useState({
         collegeName:'', 
         startDate:'', 
@@ -29,6 +29,7 @@ export default function EducationItem() {
     const handleAdd = (e => {
         e.preventDefault()
         setAdded(true)
+        props.stateChanger([...props.state, education])
     })
 
     

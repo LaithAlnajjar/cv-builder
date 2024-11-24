@@ -1,24 +1,21 @@
 import EducationItem from './EducationItem';
 import { useState } from 'react';
 
-export default function Education() {
+export default function Education(props) {
+    
+    const [educationList, setEducationList] = useState([]) 
+    const [id, setID] = useState(1)
 
-    const [educationList, setEducationList] = useState ([
-        <EducationItem
-            key = {0}
-        />
-    ])
-
-    const[id, setID] = useState(1)
-
-
-    const handleAddEduation = ((e) => {
+ 
+    const handleAddEducation = ((e) => {
         e.preventDefault()
         setID(id + 1)
         setEducationList([...educationList, 
         <EducationItem
-        key={id}
-        added={false}
+            key={id}
+            added={false}
+            state={props.state}
+            stateChanger={props.stateChanger}
         />
         ])
     })
@@ -29,7 +26,7 @@ export default function Education() {
             {educationList.map(educationItem => {
                 return educationItem
             })}
-            <button className="add-education-item" onClick={handleAddEduation}>
+            <button className="add-education-item" onClick={handleAddEducation}>
                 Add
             </button>
         </div>

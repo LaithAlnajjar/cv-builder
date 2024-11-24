@@ -1,13 +1,23 @@
 import { useState } from 'react';
 import PersonalInfo from './PersonalInfo';
-import Education from './Education'
+import Education from './Education';
 import Preview from './Preview';
 import '../styles/App.css';
 
 function App() {
 
-  const [personal, setPersonal] = useState({name:'Laith Alnajjar', address:'Amman, Jordan', phoneNumber:'0994124912', email:'laithalnajjar2004@gmail.com'})
-
+  const [personal, setPersonal] = useState({
+    name:'Laith Alnajjar', 
+    address:'Amman, Jordan',
+    phoneNumber:'0994124912', 
+    email:'laithalnajjar2004@gmail.com'
+  })
+  const [education, setEducation] = useState ([{
+    school:'The Hashemite University', 
+    startDate:'October 2022', 
+    graduationDate:'May 2026', 
+    degree:'Bachelor of Computer Science'
+  }])
 
   return (
     <>
@@ -19,7 +29,10 @@ function App() {
           />
         </div>
         <div className="card">
-          <Education/>
+          <Education
+            state={education}
+            stateChanger={setEducation}
+          />
         </div>
       </div>
       <Preview
