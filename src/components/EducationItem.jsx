@@ -37,7 +37,7 @@ export default function EducationItem(props) {
     if (!added) {
     return (
         <form className='education-item' action="post">
-            <label htmlFor="schook-name"> School Name </label>
+            <label htmlFor="school-name"> School Name </label>
             <input type="text" name="school-name" id="school-name" onChange={handleName} />
 
             <label htmlFor="start-date"> Start Date </label>
