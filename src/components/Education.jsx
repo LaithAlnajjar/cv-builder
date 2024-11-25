@@ -13,6 +13,7 @@ export default function Education(props) {
         setEducationList([...educationList, 
         <EducationItem
             key={id}
+            id={id}
             added={false}
             state={props.state}
             stateChanger={props.stateChanger}

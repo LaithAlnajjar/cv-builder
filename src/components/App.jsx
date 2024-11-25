@@ -16,7 +16,8 @@ function App() {
     school:'The Hashemite University', 
     startDate:'October 2022', 
     graduationDate:'May 2026', 
-    degree:'Bachelor of Computer Science'
+    degree:'Bachelor of Computer Science',
+    key:0
   }])
 
   return (
@@ -40,6 +41,7 @@ function App() {
         address={personal.address}
         phoneNumber={personal.phoneNumber}
         email={personal.email}
+        education={education}
       
       />
     </>

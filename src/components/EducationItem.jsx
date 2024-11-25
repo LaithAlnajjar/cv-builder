@@ -11,7 +11,7 @@ export default function EducationItem(props) {
     const[added, setAdded] = useState(false)
 
     const handleName = (e => {
-        setEducation({...education, collegeName:e.target.value})
+        setEducation({...education, school:e.target.value})
     })
 
     const handleStartDate = (e => {
@@ -29,7 +29,7 @@ export default function EducationItem(props) {
     const handleAdd = (e => {
         e.preventDefault()
         setAdded(true)
-        props.stateChanger([...props.state, education])
+        props.stateChanger([...props.state, {...education, key:props.id}])
     })
 
     
@@ -37,8 +37,8 @@ export default function EducationItem(props) {
     if (!added) {
     return (
         <form className='education-item' action="post">
-            <label htmlFor="college-name"> College Name </label>
-            <input type="text" name="college-name" id="college-name" onChange={handleName} />
+            <label htmlFor="schook-name"> School Name </label>
+            <input type="text" name="school-name" id="school-name" onChange={handleName} />
 
             <label htmlFor="start-date"> Start Date </label>
             <input type="text" name="start-date" id="start-date" onChange={handleStartDate} />
@@ -55,7 +55,7 @@ export default function EducationItem(props) {
     } else {
         return (
             <div className='education-item-added'>
-                {education.collegeName}
+                {education.school}
             </div>
         )
     }
