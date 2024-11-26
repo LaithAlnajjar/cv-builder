@@ -4,6 +4,7 @@ import Education from './Education';
 import Preview from './Preview';
 import '../styles/App.css';
 import Experience from './Experience';
+import Skills from './Skills.jsx';
 
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
     desc:'Made Websites',
     key:0
   }])
+  const [skills, setSkills] = useState([{
+    title:'Technical',
+    skillList:'Python, Javascript, SQL'
+  }])
 
   return (
     <>
@@ -50,6 +55,12 @@ function App() {
             stateChanger={setExperience}
           />
         </div>
+        <div className="card">
+          <Skills
+            state={skills}
+            stateChanger={setSkills}
+          />
+        </div>
       </div>
       <Preview
         name={personal.name}
@@ -58,7 +69,7 @@ function App() {
         email={personal.email}
         education={education}
         experience={experience}
-      
+        skills={skills}
       />
     </>
   )

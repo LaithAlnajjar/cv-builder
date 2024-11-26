@@ -1,6 +1,6 @@
 import '../styles/Preview.css';
 
-export default function Preview({ name, address, phoneNumber, email, education, experience }) {
+export default function Preview({ name, address, phoneNumber, email, education, experience, skills }) {
     
     return (
         <div className="preview">
@@ -31,6 +31,15 @@ export default function Preview({ name, address, phoneNumber, email, education, 
                         <div> {item.startDate} </div>
                         <div> {item.endDate} </div>
                         <div> {item.desc}</div>
+                    </div>)
+                } )}
+            </div>
+
+            <div className="skills">
+                {skills.map(item => {
+                   return (<div className="skills-item" key={item.key}>
+                        <div> {item.title} </div>
+                        <div> {item.skillList} </div>
                     </div>)
                 } )}
             </div>
