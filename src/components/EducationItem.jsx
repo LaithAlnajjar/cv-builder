@@ -32,6 +32,17 @@ export default function EducationItem(props) {
         props.stateChanger([...props.state, {...education, key:props.id}])
     })
 
+    const handleDelete = (e => {
+        e.preventDefault();
+        props.stateChanger(props.state.filter(item => {
+            if (item.key != education.key)
+                return item;
+        }))
+        props.setParentState(props.parentState.filter(item => {
+            if(item.key != education.key)
+                return item;
+        }))
+    })
     
 
     if (!added) {
@@ -56,6 +67,9 @@ export default function EducationItem(props) {
         return (
             <div className='education-item-added'>
                 {education.school}
+                <button onClick={handleDelete}>
+                    Delete
+                </button>
             </div>
         )
     }

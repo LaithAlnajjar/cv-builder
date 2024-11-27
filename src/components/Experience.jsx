@@ -15,6 +15,8 @@ export default function Experience(props) {
             key={id}
             id={id}
             added={false}
+            parentState={experienceList}
+            setParentState={setExperienceList}
             state={props.state}
             stateChanger={props.stateChanger}
         />

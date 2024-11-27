@@ -22,6 +22,18 @@ export default function SkillItem(props) {
         props.stateChanger([...props.state, {...skill, key:props.id}])
     })
 
+    const handleDelete = (e => {
+        e.preventDefault();
+        props.stateChanger(props.state.filter(item => {
+            if (item.key != skill.key)
+                return item;
+        }))
+        props.setParentState(props.parentState.filter(item => {
+            if(item.key != skill.key)
+                return item;
+        }))
+    })
+
     
 
     if (!added) {
@@ -40,6 +52,9 @@ export default function SkillItem(props) {
         return (
             <div className='experience-item-added'>
                 {skill.title}
+                <button onClick={handleDelete}>
+                    Delete
+                </button>
             </div>
         )
     }

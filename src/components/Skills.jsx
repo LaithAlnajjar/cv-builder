@@ -14,6 +14,8 @@ export default function Skills(props) {
             key={id}
             id={id}
             added={false}
+            parentState={skillList}
+            setParentState={setSkillList}
             state={props.state}
             stateChanger={props.stateChanger}
         />

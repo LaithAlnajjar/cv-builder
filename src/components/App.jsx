@@ -14,25 +14,9 @@ function App() {
     phoneNumber:'0994124912', 
     email:'laithalnajjar2004@gmail.com'
   })
-  const [education, setEducation] = useState ([{
-    school:'The Hashemite University', 
-    startDate:'October 2022', 
-    graduationDate:'May 2026', 
-    degree:'Bachelor of Computer Science',
-    key:0
-  }])
-  const [experience, setExperience] = useState([{
-    companyName:'Google',
-    job:'Software Engineer',
-    startDate:'October 2022', 
-    endDate:'May 2026', 
-    desc:'Made Websites',
-    key:0
-  }])
-  const [skills, setSkills] = useState([{
-    title:'Technical',
-    skillList:'Python, Javascript, SQL'
-  }])
+  const [education, setEducation] = useState ([])
+  const [experience, setExperience] = useState([])
+  const [skills, setSkills] = useState([])
 
   return (
     <>

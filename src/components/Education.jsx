@@ -15,6 +15,8 @@ export default function Education(props) {
             key={id}
             id={id}
             added={false}
+            parentState={educationList}
+            setParentState={setEducationList}
             state={props.state}
             stateChanger={props.stateChanger}
         />

@@ -38,6 +38,18 @@ export default function ExperienceItem(props) {
         props.stateChanger([...props.state, {...experience, key:props.id}])
     })
 
+    const handleDelete = (e => {
+        e.preventDefault();
+        props.stateChanger(props.state.filter(item => {
+            if (item.key != experience.key)
+                return item;
+        }))
+        props.setParentState(props.parentState.filter(item => {
+            if(item.key != experience.key)
+                return item;
+        }))
+    })
+
     
 
     if (!added) {
@@ -65,6 +77,7 @@ export default function ExperienceItem(props) {
         return (
             <div className='experience-item-added'>
                 {experience.companyName}
+                <button onClick={handleDelete}>Delete</button>
             </div>
         )
     }
