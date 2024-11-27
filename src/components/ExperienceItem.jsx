@@ -50,25 +50,30 @@ export default function ExperienceItem(props) {
         }))
     })
 
+    const handleEdit = (e => {
+        e.preventDefault();
+        setAdded(false);
+    })
+
     
 
     if (!added) {
     return (
         <form className='job-item' action="">
             <label htmlFor="company-name"> Company </label>
-            <input type="text" name="company-name" id="company-name" onChange={handleCompany} />
+            <input type="text" name="company-name" id="company-name" value={experience.companyName} onChange={handleCompany} />
 
             <label htmlFor="job-title"> Job Title </label>
-            <input type="text" name="job-title" id="job-title" onChange={handleJob} />
+            <input type="text" name="job-title" id="job-title" value={experience.job} onChange={handleJob} />
 
             <label htmlFor="start-date"> Start Date </label>
-            <input type="text" name="start-date" id="start-date" onChange={handleStartDate} />
+            <input type="text" name="start-date" id="start-date" value={experience.startDate} onChange={handleStartDate} />
 
             <label htmlFor="end-date"> End Date </label>
-            <input type="text" name="end-date" id="end-date" onChange={handleendDate} />
+            <input type="text" name="end-date" id="end-date" value={experience.endDate} onChange={handleendDate} />
 
             <label htmlFor="job-description">Job Description</label>
-            <input type="text" name="job-description" id="job-description" onChange={handleDesc}/>
+            <input type="text" name="job-description" id="job-description" value={experience.desc} onChange={handleDesc}/>
 
             <button type="submit" onClick={handleAdd}>Add</button>
         </form>
@@ -78,6 +83,9 @@ export default function ExperienceItem(props) {
             <div className='experience-item-added'>
                 {experience.companyName}
                 <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleEdit}>
+                    Edit
+                </button>
             </div>
         )
     }

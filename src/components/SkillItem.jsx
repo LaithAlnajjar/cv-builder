@@ -34,16 +34,20 @@ export default function SkillItem(props) {
         }))
     })
 
+    const handleEdit = (e => {
+        e.preventDefault();
+        setAdded(false);
+    })
     
 
     if (!added) {
     return (
         <form className='skill-item' action="">
             <label htmlFor="skill-title"> Skills Section Title </label>
-            <input type="text" name="skill-title" id="skill-title" onChange={handleTitle} />
+            <input type="text" name="skill-title" id="skill-title" value={skill.title} onChange={handleTitle} />
 
             <label htmlFor="skill-list"> Skill List </label>
-            <input type="text" name="skill-list" id="skill-list" onChange={handleSkillList} />
+            <input type="text" name="skill-list" id="skill-list" value={skill.skillList} onChange={handleSkillList} />
 
             <button type="submit" onClick={handleAdd}>Add</button>
         </form>
@@ -54,6 +58,9 @@ export default function SkillItem(props) {
                 {skill.title}
                 <button onClick={handleDelete}>
                     Delete
+                </button>
+                <button onClick={handleEdit}>
+                    Edit
                 </button>
             </div>
         )

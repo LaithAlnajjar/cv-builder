@@ -43,22 +43,27 @@ export default function EducationItem(props) {
                 return item;
         }))
     })
+
+    const handleEdit = (e => {
+        e.preventDefault();
+        setAdded(false);
+    })
     
 
     if (!added) {
     return (
         <form className='education-item' action="post">
             <label htmlFor="school-name"> School Name </label>
-            <input type="text" name="school-name" id="school-name" onChange={handleName} />
+            <input type="text" name="school-name" id="school-name" value={education.school} onChange={handleName} />
 
             <label htmlFor="start-date"> Start Date </label>
-            <input type="text" name="start-date" id="start-date" onChange={handleStartDate} />
+            <input type="text" name="start-date" id="start-date" value={education.startDate} onChange={handleStartDate} />
 
             <label htmlFor="graduation-date"> Graduation Date </label>
-            <input type="text" name="graduation-date" id="graduation-date" onChange={handleGraduationDate} />
+            <input type="text" name="graduation-date" id="graduation-date" value={education.graduationDate} onChange={handleGraduationDate} />
 
             <label htmlFor="degree"> Degree </label>
-            <input type="text" name="degree" id="degree" onChange={handleDegree} />
+            <input type="text" name="degree" id="degree" value={education.degree} onChange={handleDegree} />
 
             <button type="submit" onClick={handleAdd}>Add</button>
         </form>
@@ -69,6 +74,9 @@ export default function EducationItem(props) {
                 {education.school}
                 <button onClick={handleDelete}>
                     Delete
+                </button>
+                <button onClick={handleEdit}>
+                    Edit
                 </button>
             </div>
         )
