@@ -15,7 +15,7 @@ A simple React application that allows users to enter their personal information
 
 ## Project Screenshot
 
-![CV Builder](./assets/project-screenshot.png)
+![CV Builder Screenshot](./project-screenshot.png)
 
 ## Demo
 
