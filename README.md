@@ -20,4 +20,4 @@ A simple React application that allows users to enter their personal information
 ## Demo
 
 You can view the live demo of the project here:  
-[Live Demo](#)
+[Live Demo](https://cv-builder-fawn-seven.vercel.app/)
