@@ -5,7 +5,14 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 1px;
+
 }
+
+body {
+    background: linear-gradient(to top, #83bfff, #ffffff)
+}
+
+
 
 .form-section {
     display: flex;
@@ -14,3 +21,4 @@
     gap: 20px;
     font-family: Poppins, sans-serif;
 }
+

@@ -74,6 +74,7 @@ function App() {
         experience={experience}
         skills={skills}
       />
+      <div className="curve"></div>
     </>
   )
 }
