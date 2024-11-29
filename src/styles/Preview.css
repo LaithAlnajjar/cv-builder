@@ -1,7 +1,134 @@
-.preview {
-    width: 100%;
+.preview-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    width: 794px;
+    height: 1123px;
+    border: 1px solid #ddd; 
+    margin: 0 auto;
+    background: white;
+    overflow: hidden; 
+  }
+
+.cv-personal-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.name, .address, .phoneNumber, .email {
     text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 90;
+}
+
+.sub-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+
+.dot {
+    font-weight: 1000;
+}
+
+.education, .experience, .skills {
+    padding: 40px 30px;
+    padding-bottom: 10px;
+    
+}
+
+.section-title {
+    font-size: 1.65rem;
+}
+
+hr {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* Education */
+
+.education-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.education-nd {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-date {
+    display: flex;
+    gap: 5px;
+}
+
+.school-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.degree {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Experience */
+
+.experience {
+    padding-top: 0;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.job-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.company-name {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.job-date {
+    display: flex;
+    gap: 5px;
+}
+
+/* Skills */
+
+.skills {
+    padding-top: 0;
+}
+
+.skills-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 4px;
+}
+
+.skill-title {
+    font-weight: 600;
+    font-size: 1.05rem;
 }
