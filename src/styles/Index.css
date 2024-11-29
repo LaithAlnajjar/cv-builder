@@ -1,7 +1,0 @@
-#root {
-    min-height: 100vh;
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 45vw 45vw;
-    gap: 100px;
-}

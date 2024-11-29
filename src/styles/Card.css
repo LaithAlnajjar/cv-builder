@@ -1,16 +1,33 @@
 
 
 .card {
-    width: 35vw;
-    padding: 80px;
+    width: 30vw;
+    padding: 40px;
     border-radius: 20px;
     border: 2px solid #D6D9DC;
 }
 
-form {
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+svg {
+    width: 40px;
+    height: auto;
+    fill: black;
+}
+
+.card-title-text {
+    font-size: 1.45rem;
+}
+
+.card form {
     display: flex;
     flex-direction: column;
-    gap: 10px 20px; 
+    gap: 5px; 
     margin: 0 auto;
 }
 
@@ -21,6 +38,7 @@ form {
 }
 
 input {
+    height: 25px;
     background-color: #FFFFFF;
     border: 1px solid #D6D9DC;
     border-radius: 3px;
@@ -34,4 +52,101 @@ label {
     height: 24px;
 }
 
+/* Item Sty;ing */
+
+button {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
+button:active {
+background-color: #004085;
+transform: scale(0.98);
+}
+
+
+.add-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.add-item {
+    width: 180px;
+    height: 45px;
+}
+
+.item-added {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.added-item-text {
+    font-size: 1.3rem;
+}
+
+.item-added svg {
+    width: 33px;
+}
+
+.item-added svg:hover {
+    cursor: pointer;
+}
+
+.delete {
+    fill: rgb(221, 42, 42);
+}
+
+
+/* Internal Item Form*/
+
+.item-form {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.date input {
+    color: #8e8e8e;
+}
+
+.confirm-container{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 600;
+    width: 120px;
+    height: 45px;
+    background-color: rgb(28, 199, 28);
+}
+
+.confirm svg {
+    fill: white;
+    width: 32px;
+}
 

@@ -23,41 +23,45 @@ export default function PersonalInfo(props) {
         
             <form action="" className="personal-info">
             <div className="form-group">
-                <label htmlFor="name"> Name </label>
+                <label htmlFor="name"></label>
                 <input 
                 type='text' 
                 id="name" 
                 name="name"
+                placeholder='Full Name'
                 onChange={handleName}
                 />
             </div>
 
             <div className="form-group">
-                <label htmlFor="address"> Address </label>
+                <label htmlFor="address"> </label>
                 <input 
                 type='text' 
                 id="address" 
                 name="address"
+                placeholder='Address'
                 onChange={handleAddress}
                 />
             </div>
 
             <div className="form-group">
-                <label htmlFor="phone-no"> Phone Number </label>
+                <label htmlFor="phone-no"> </label>
                 <input 
                 type='tel' 
                 id="phone-no" 
                 name="phone-no"
+                placeholder='Phone Number'
                 onChange={handlePhoneNumber}
                 />
             </div>
 
             <div className="form-group">
-                <label htmlFor="email"> Email </label>
+                <label htmlFor="email"> </label>
                 <input 
                 type='email' 
                 id="email" 
                 name="email"
+                placeholder='Email'
                 onChange={handleEmail}
                 />
             </div>

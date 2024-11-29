@@ -7,7 +7,7 @@ export default function Experience(props) {
     const [id, setID] = useState(1)
 
  
-    const handleAddEducation = ((e) => {
+    const handleAddExperience = ((e) => {
         e.preventDefault()
         setID(id + 1)
         setExperienceList([...experienceList, 
@@ -29,9 +29,11 @@ export default function Experience(props) {
             {experienceList.map(educationItem => {
                 return educationItem
             })}
-            <button className="add-experience-item" onClick={handleAddEducation}>
-                Add
-            </button>
+            <div className="add-button-container">
+                <button className="add-item" onClick={handleAddExperience}>
+                    Add Experience
+                </button>
+            </div>
         </div>
     
     )

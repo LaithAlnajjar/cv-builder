@@ -25,13 +25,15 @@ export default function Education(props) {
 
     return (
         
-        <div className="education">
+        <div className="education-form">
             {educationList.map(educationItem => {
                 return educationItem
             })}
-            <button className="add-education-item" onClick={handleAddEducation}>
-                Add
-            </button>
+            <div className="add-button-container">
+                <button className="add-item" onClick={handleAddEducation}>
+                    Add Edducation
+                </button>
+            </div>
         </div>
     
     )

@@ -29,9 +29,11 @@ export default function Skills(props) {
             {skillList.map(skillItem => {
                 return skillItem;
             })}
-            <button className="add-experience-item" onClick={handleAddSkill}>
-                Add
-            </button>
+            <div className="add-button-container">
+                <button className="add-item" onClick={handleAddSkill}>
+                    Add Skill
+                </button>
+            </div>
         </div>
     )
 
